@@ -31,7 +31,28 @@ RUN apt update &&                  \
         libgl1-mesa-dev            \
         libudev-dev                \
         qt5-default                \
-        qtbase5-private-dev      &&\
+        qtbase5-private-dev        \
+        g++                        \
+        cmake                      \
+        gdb                        \
+        gdbserver                  \
+        rsync                      \
+        zip                        \
+        openssh-server           &&\
+        
+    apt-get install -y             \
+        libtool                    \
+        autotools-dev              \
+        automake                   \
+        pkg-config                 \
+        libevent-dev               \
+        bsdmainutils               \
+        python3                    \
+        libboost-system-dev        \
+        libboost-filesystem-dev    \
+        libboost-chrono-dev        \
+        libboost-test-dev          \
+        libboost-thread-dev      &&\
     apt clean
 
 WORKDIR /home/root/
